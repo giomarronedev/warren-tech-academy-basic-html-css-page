@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Formulário</title>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <img src="../assets/warren-logo.png" alt="Logo da Warren" />
+      </a>
+      <h1 class="page-title">Formulário</h1>
+    </header>
+    <div class="content">
+      <h2>Seja bem-vindo</h2>
+      <p class="subtitle">Dados de contato</p>
+      <p class="primary-text">
+        Preencha o formulário abaixo para começar a investir na Warren e tornar
+        seus sonhos realidade!
+      </p>
+
+      <form>
+        <label for="name" class="text-label">Nome completo</label>
+        <input id="name" class="text-input" type="text" />
+
+        <label for="email" class="text-label">E-mail</label>
+        <input id="email" class="text-input" type="email" />
+
+        <label for="phone" class="text-label">Celular</label>
+        <input id="phone" class="text-input" type="text" />
+
+        <label for="birthday" class="text-label">Data de nascimento</label>
+        <input id="birthday" class="text-input" type="date" />
+
+        <p class="secondary-text">
+          Estamos quase lá! Agora só faltam algumas coisinhas!
+        </p>
+        <p class="secondary-text">
+          Por onde você gostaria que entrássemos em contato?
+        </p>
+
+        <div class="contact">
+          <div class="checkbox-div">
+            <input class="checkbox-label" type="checkbox" name="" id="" />
+            <label class="checkbox-label">Email e SMS</label>
+          </div>
+          <div class="checkbox-div">
+            <input class="checkbox-label" type="checkbox" name="" id="" />
+            <label class="checkbox-label">Whatsapp</label>
+          </div>
+        </div>
+        <p class="primary-text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis
+          quos amet eos harum, ullam labore nihil animi asperiores sequi earum
+          eveniet debitis deleniti.
+        </p>
+
+        <button class="button">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>

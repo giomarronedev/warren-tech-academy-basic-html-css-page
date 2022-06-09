@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: sans-serif;
-  color: #2f2f33;
+  color: #333333;
 
   background-color: #f5f6fa;
 }
@@ -21,120 +21,56 @@ span {
   color: #e02b57;
 }
 
+header {
+  background-color: #e02b57;
+  padding: 10px 20px;
+}
+
+header img {
+  width: 12rem;
+  margin-left: 3rem;
+}
+
 .container {
   padding: 5rem 20rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 15rem;
+}
+
+.content {
+  margin-bottom: 15rem;
 }
 
 .main-img {
   width: 500px;
   border-radius: 0.8rem;
-  opacity: 0;
-
-  animation-name: reveal-img;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 1.5s;
-}
-
-@keyframes reveal-img {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
 }
 
 h1 {
   font-size: 4.8rem;
-  margin-bottom: 10rem;
+  margin-block: 4rem 10rem;
   text-align: center;
-
-  animation-name: reveal-h1;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes reveal-h1 {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
 }
 
 h2 {
+  font-size: 4.8rem;
+  margin-block: 4rem;
+}
+
+h3 {
   font-size: 3.2rem;
   margin-block: 3.2rem;
-  opacity: 0;
-
-  animation-name: reveal-h2;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.first-h2 {
-  animation-delay: 3s;
-}
-
-.second-h2 {
-  animation-delay: 4s;
-}
-
-.third-h2 {
-  animation-delay: 5s;
-}
-
-@keyframes reveal-h2 {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
 }
 
 p {
   font-size: 1.6rem;
-  opacity: 0;
 
   animation-name: reveal-p;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-}
-
-.first-p {
-  animation-delay: 3.5s;
-}
-
-.second-p {
-  animation-delay: 4.5s;
-}
-
-.third-p {
-  animation-delay: 5.5s;
-}
-
-@keyframes reveal-p {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
 }
 
 .text-column {
@@ -146,9 +82,7 @@ p {
   margin-bottom: 5rem;
 }
 
-button {
-  opacity: 0;
-
+.button {
   background-color: #e02b57;
 
   padding: 1.2rem 2.4rem;
@@ -160,22 +94,10 @@ button {
   color: white;
 
   font-size: 1.6rem;
-
-  animation-name: reveal-btn;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-delay: 6s;
 }
 
-@keyframes reveal-btn {
-  0% {
-    transform: translateX(5rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
+.create-wallet-btn {
+  opacity: 1;
 }
 
 button:hover {
@@ -186,50 +108,51 @@ button:hover {
   color: #e02b57;
 }
 
-.author {
-  margin-top: 10rem;
-  padding: 0;
-  opacity: 0;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.banner {
   text-align: center;
-
-  animation-name: reveal-author;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-delay: 7s;
+  background-color: #e02b57;
+  border-radius: 0.8rem;
+  color: white;
+  padding: 4rem 6rem;
+  width: 100%;
 }
 
-@keyframes reveal-author {
-  0% {
-    transform: translateY(5rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+.banner-description {
+  margin-block: 1.6rem;
 }
 
-.social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+.open-account-btn {
+  background-color: #333333;
 }
 
-.social {
-  width: 4rem;
-  margin: 0;
-  display: inline-block;
-
-  transition: 0.1s;
+.open-account-btn a {
+  color: white;
+  text-decoration: none;
 }
 
-.social:hover {
-  transition: 0.1s;
-  transform: scale(1.1);
+.open-account-btn:hover {
+  border: 2px solid #333333;
+  color: #333333;
+}
+
+.open-account-btn:hover a {
+  color: #333333;
+}
+
+.footer {
+  background-color: #333333;
+  padding: 5rem;
+  text-align: center;
+  width: 100%;
+}
+
+li {
+  font-size: 1.6rem;
+  list-style: none;
+}
+
+li a {
+  color: white;
 }
 
 /* Media Query ========================================================= */
@@ -242,7 +165,6 @@ button:hover {
 }
 
 @media (max-width: 1200px) {
-
   .container {
     padding: 5rem 0;
   }
@@ -252,6 +174,11 @@ button:hover {
     flex-direction: column;
     align-items: center;
   }
+
+  .banner {
+    width: 90%;
+  }
+
 
   h1 {
     font-size: 3.2rem;
@@ -284,8 +211,8 @@ button:hover {
     width: 300px;
   }
 
-  .author {
-    width: 60%;
+  .banner {
+    width: 90%;
   }
 
   h2 {
@@ -296,4 +223,3 @@ button:hover {
     margin-bottom: 4rem;
   }
 }
-
